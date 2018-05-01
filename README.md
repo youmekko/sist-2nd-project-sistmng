@@ -26,11 +26,11 @@
 
 * 수강생은 본인의 개인정보 확인, 성적 조회, 과정의 상세보기가 가능하다.
 
-### ~~구현 화면~~
+### 주요 참여 내용 (강사 로그인 메뉴 전부, 주요 로직 코드는 [여기](https://github.com/youmekko/sist-2nd-project-sistmng/blob/master/src/com/sistmng/instructor/InstructorDAO.java)) 
 
-### 주요 참여 내용 
+### 강사 메뉴 구현 화면
 
-* 강사 로그인 메뉴 전부 주요 로직 코드 [여기](https://github.com/youmekko/sist-2nd-project-sistmng/blob/master/src/com/sistmng/instructor/InstructorDAO.java)
+![](/img/instructor.gif)
 
 ### DB 스키마
 
