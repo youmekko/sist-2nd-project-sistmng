@@ -218,7 +218,7 @@ public class InstructorDAO {
 		GROUP BY m.mid, m.name_ ,m.phone, s.studentRegDate, openS.openSubCode ,openS.openSubStartDate , openS.openSubCloseDate, dropO.failureCode ,dropO.failureDate*/
 
 		// 회원코드 / 이름 / 전화번호 / 등록일 / 개설과목시작일 / 개설과목종료일 / 탈락코드 / 탈락 날짜 / 수료
-		String sql = "SELECT mid, name_, phone, studentRegDate, openSubStartDate, openSubCloseDate, NVL(failureCode, 'noFailureCode') finalFailureCode, NVL(failureDate, '1901-01-01') finalFailureDate FROM studentListBySubjectView	 Where openSubCode = ?";
+		String sql = "SELECT mid, name_, phone, studentRegDate, openSubStartDate, openSubCloseDate, NVL(failureCode, 'noFailureCode') finalFailureCode, NVL(failureDate, '1901-01-01') finalFailureDate FROM studentListBySubjectView Where openSubCode = ? ORDER BY mid ASC";
 
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -645,7 +645,7 @@ public class InstructorDAO {
 		ORDER BY stt.testCode ASC*/
 
 		// 회원코드 / 이름 / 전화번호 / 등록일 / 수료 / 출결점수 / 필기점수 / 실기점수 / 총점"
-		String sql = "SELECT mid, name_, phone, memberRegDate, NVL(failureCode, 'noFailureCode') finalFailureCode, NVL(failureDate, '1901-01-01') finalFailureDate, attendanceScore, writingScore, practiceScore FROM testStudentView WHERE testCode = ?";
+		String sql = "SELECT mid, name_, phone, memberRegDate, NVL(failureCode, 'noFailureCode') finalFailureCode, NVL(failureDate, '1901-01-01') finalFailureDate, attendanceScore, writingScore, practiceScore FROM testStudentView WHERE testCode = ? ORDER BY mid ASC";
 
 		Connection conn = null;
 		PreparedStatement pstmt = null;
